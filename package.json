@@ -1,0 +1,36 @@
+{
+  "name": "devrecord",
+  "version": "1.0.0",
+  "main": "build/index.js",
+  "type": "module",
+  "bin": {
+    "devrecord": "./build/index.js"
+  },
+  "scripts": {
+    "build": "tsc",
+    "start": "node build/index.js",
+    "dev": "npm run build && npm run start"
+  },
+  "files": [
+    "build",
+    "src/template"
+  ],
+  "keywords": [
+    "mcp",
+    "record",
+    "template",
+    "documentation"
+  ],
+  "author": "",
+  "license": "ISC",
+  "description": "MCP服务器，提供模板化的对话记录和整理功能",
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.17.2",
+    "zod": "^3.25.76",
+    "zod-to-json-schema": "^3.24.6"
+  },
+  "devDependencies": {
+    "@types/node": "^24.2.1",
+    "typescript": "^5.9.2"
+  }
+}
