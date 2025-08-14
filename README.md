@@ -16,21 +16,36 @@
 
 ## 使用方式
 
-### 1. 构建项目
+### 1. 克隆项目
+```bash
+git clone https://github.com/seenbefore/DevRecord.git
+cd DevRecord
+```
+
+### 2. 安装依赖
+node版本16+，推荐18
+```bash
+npm install
+```
+
+### 3. 构建项目
 ```bash
 npm run build
 ```
 
-### 2. 启动服务器
-```bash
-npm start
-# 或直接运行
-node build/index.js
+### 4. 在 mcp_client 中使用
+```
+{
+  "mcpServers": {
+    "devrecord": {
+      "command": "node",
+      "args": ["C:\\PATH\\TO\\PARENT\\FOLDER\\DevRecord\\build\\index.js"]
+    }
+  }
+}
 ```
 
-### 3. 在大模型中使用
-
-当您对大模型说："帮我记录一下"，大模型会：
+当您对大模型说："用devrecord帮我记录一下"，大模型会：
 
 1. 调用 `get_template_list` 获取可用模板列表
 2. 根据对话内容选择合适的模板
@@ -87,3 +102,9 @@ DevRecord/
 - 使用 TypeScript 进行开发
 - 遵循 MCP 协议规范
 - 支持跨平台运行（Windows/Linux/macOS） 
+
+## 参与贡献
+欢迎提交 Issue 或 Pull Request！
+
+## 开源协议
+本项目基于 [MIT License](LICENSE) 开源。
